@@ -26,7 +26,7 @@ Historical ciphers are mostly pen and paper methods. The key and cryptosystem sh
 ### Caesar Cipher
 Every letter is replaced by a letter some fixed number of positions *k* down the alphabet. This was used in ancient Rome by Julius Caesar, who supposedly invented it.
 
-The possible plaintexts is called plaintext space. The number of possible keys is called the key space.
+The possible plaintexts are called the plaintext space. The number of possible keys is called the key space.
 
 ![Pasted image 20211103183728.png](Pasted%20image%2020211103183728.png)
 
@@ -35,7 +35,7 @@ There are only 25 possible keys with the Caesar cipher. This is very weak nowada
 ![Pasted image 20211103183909.png](Pasted%20image%2020211103183909.png)
 
 ### Affine Cipher
-In order to increase the key space, we can use two numbers *a* and *b* as the key and encrypt as follows: *E(p, k) = a . p + b (mod 26)*.
+To increase the key space, we can use two numbers *a* and *b* as the key and encrypt as follows: *E(p, k) = a . p + b (mod 26)*.
 
 The key space is much lower than this because we need the inverse of *a* for decryption but not every number has an inverse modular 26. Note that *.* means multiply.
 
@@ -81,7 +81,7 @@ This was invented by Charles Wheatstone in 1854. It was the first literal digrap
 
 It uses a 5 x 5 table containing a keyword and the rest of the alphabet. Memorising the keyword (key) and 4 simple rules is enough to use Playfair. Ironically, the British Foreign Office rejected it because of its perceived complexity, even though Wheatstone offered to demonstrate that 3/4 boys in a nearby school could learn how to use it in 15 minutes. The rest of the world started using it. Lord Playfair promoted its use, hence the name.
 
-Modern ciphers have algorithms that help us use keys, which is called the key schedule. You write the keyword at the top and fill in the table with the remaining unused letters. The person decrypting has to decide whether a letter corresponds to 'i' or 'j'.
+Modern ciphers have algorithms that help us use keys, which is called the key schedule. You write the keyword at the top and fill in the table with the remaining unused letters. The person decrypting must decide whether a letter corresponds to 'i' or 'j'.
 
 ![Pasted image 20211104203024.png](Pasted%20image%2020211104203024.png)
 
@@ -117,7 +117,7 @@ Then the last one is a rectangle again.
 
 ![Pasted image 20211104203920.png](Pasted%20image%2020211104203920.png)
 
-As far I know, it was used in WW1. This cipher was followed up by the four-square and two-square ciphers, which were slightly more cumbersome but had marginally better security.
+As far as I know, it was used in WW1. This cipher was followed up by the four-square and two-square ciphers, which were slightly more cumbersome but had marginally better security.
 
 ### Frequency Analysis Countermeasures
 - Use polygraphic substitution. This idea led to the development of block ciphers.
@@ -128,7 +128,7 @@ As far I know, it was used in WW1. This cipher was followed up by the four-squar
 ## Kerkchkhoffs's Principle (1883)
 A cipher must not be required to be secret. It must be able to fall into the hands of the enemy without inconvenience. In other words, the security of the system must rest entirely on the secrecy of the key. Security through obscurity (hiding things) has failed numerous times. Always assume that the cipher can fall into the hands of the enemy.
 
-Claude Shannon also said 'The enemy knows the system'. This is realistic. The three B's of cryptography are:
+Claude Shannon also said, 'The enemy knows the system'. This is realistic. The three Bs of cryptography are:
 1. Bribe
 2. Burglary
 3. Blackmail
@@ -142,14 +142,14 @@ XOR means exclusive OR. This is equivalent to addition in modulo 2. Each column 
 
 ![Pasted image 20211105201522.png](Pasted%20image%2020211105201522.png)
 
-If you encrypt a plaintext with a one-time pad and then another plaintext with the same one-time pad, then an attacker who captured both ciphertexts can capture parts of all of the plaintext.
+If you encrypt a plaintext with a one-time pad and then another plaintext with the same one-time pad, then an attacker who captured both ciphertexts can capture parts of/all of the plaintext.
 
 The one-time pad provides perfect secrecy (the ciphertext provides no information about the plaintext). It's usually printed on a single page with very small letters, hence the name one-time pad. Instead of working with bits, one can work on letters or characters.
 
 The limitations include:
 - The key is too long because it's the same length as the plaintext.
 - Key distribution is tricky because you can only use a key once.
-- The key has to be truly random.
+- The key must be truly random.
 
 Therefore, it's not practical.
 

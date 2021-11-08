@@ -95,7 +95,7 @@ Here are the rules:
 
 Since this is a digraph cipher, you need to group the plaintext letters into pairs. The rules say to replace 'C' with the letter to the right ('R') and 'Y' with the letter to the right ('P').
 
-![Pasted image 20211104203609.png](Pasted%20image%20211104203609.png)
+![Pasted image 20211104203609.png](Pasted%20image%2020211104203609.png)
 
 Because 'B' and 'E' are not on the same row, you have to create a rectangle. 'L' and 'I' are on the opposite diagonals/sides.
 
@@ -103,7 +103,7 @@ Because 'B' and 'E' are not on the same row, you have to create a rectangle. 'L'
 
 Next, 'R' and 'S' are not on the same row, meaning we do the same.
 
-![Pasted image 20211104203802.png](Pasted$20image$2020211104203802.png)
+![Pasted image 20211104203802.png](Pasted%20image%2020211104203802.png)
 
 ![Pasted image 20211104203831.png](Pasted%20image%2020211104203831.png)
 
